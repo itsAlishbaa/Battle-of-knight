@@ -58,3 +58,91 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+/*------------------------------------------------------------*/
+/* Knight Styles */
+.knight-wrapper {
+    width: 60px;
+    height: 90px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.helmet {
+    width: 40px;
+    height: 35px;
+    background: #5D6D7E;
+    border-radius: 50% 50% 0 0;
+    margin: 0 auto;
+    border: 2px solid #2C3E50;
+}
+
+.chestplate {
+    width: 50px;
+    height: 40px;
+    background: #85929E;
+    margin: -5px auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sword {
+    width: 6px;
+    height: 45px;
+    background: #D5D8DC;
+    position: absolute;
+    top: -30px;
+    right: -5px;
+    border: 1px solid #7F8C8D;
+}
+
+/* Skeleton Styles */
+.skeleton-wrapper {
+    width: 60px;
+    height: 90px;
+    position: relative;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+}
+
+.skull {
+    width: 30px;
+    height: 30px;
+    background: #FDFEFE;
+    border-radius: 40%;
+    margin: 0 auto;
+}
+
+.ribcage {
+    width: 35px;
+    height: 35px;
+    border-top: 4px solid #FDFEFE;
+    border-bottom: 4px solid #FDFEFE;
+    margin: 5px auto;
+    position: relative;
+}
+
+.eyes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+    .eyes::before, .eyes::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: red;
+        border-radius: 50%;
+        box-shadow: 0 0 5px red;
+    }
+
+/* Animation Keyframes */
+.attack {
+    transform: translateX(30px) scale(1.1);
+}
+
+.hit {
+    transform: rotate(-20deg);
+    opacity: 0.7;
+}

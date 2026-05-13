@@ -1,0 +1,16 @@
+﻿<div class="skeleton-wrapper @StateClass">
+    <div class="skull">
+        <div class="eyes"></div>
+    </div>
+    <div class="ribcage">
+        <div class="bone-arm left"></div>
+        <div class="bone-arm right">
+            <div class="axe"></div>
+        </div>
+    </div>
+    <div class="bony-legs"></div>
+</div>
+
+@code {
+    [Parameter] public string StateClass { get; set; } = "idle";
+}

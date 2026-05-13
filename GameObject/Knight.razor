@@ -1,0 +1,17 @@
+﻿<div class="knight-wrapper @StateClass">
+    <div class="helmet">
+        <div class="plume"></div>
+    </div>
+    <div class="chestplate">
+        <div class="arm left"></div>
+        <div class="arm right">
+            <div class="sword"></div>
+        </div>
+    </div>
+    <div class="legs"></div>
+</div>
+
+@code {
+    [Parameter] public string StateClass { get; set; } = "idle";
+    // States: 'idle', 'attack', 'hit'
+}
