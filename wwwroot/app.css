@@ -148,3 +148,125 @@ h1:focus {
     transform: rotate(-20deg);
     opacity: 0.7;
 }
+/* --- Knight Styling --- */
+.knight-wrapper {
+    width: 60px;
+    height: 90px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.helmet {
+    width: 35px;
+    height: 35px;
+    background: #5D6D7E;
+    border-radius: 40% 40% 10% 10%;
+    border: 3px solid #2C3E50;
+    position: relative;
+}
+
+.plume { /* Helmet ka par */
+    width: 10px;
+    height: 15px;
+    background: #C0392B;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    border-radius: 50%;
+}
+
+.chestplate {
+    width: 45px;
+    height: 40px;
+    background: #85929E;
+    border-radius: 5px;
+    margin-top: -5px;
+    border: 2px solid #2C3E50;
+    position: relative;
+}
+
+.sword {
+    width: 8px;
+    height: 50px;
+    background: #BDC3C7;
+    border: 2px solid #7F8C8D;
+    position: absolute;
+    bottom: 5px;
+    right: -15px;
+    transform: rotate(10deg);
+}
+
+/* --- Skeleton Styling --- */
+.skeleton-wrapper {
+    width: 60px;
+    height: 90px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skull {
+    width: 30px;
+    height: 32px;
+    background: #ECF0F1;
+    border-radius: 40% 40% 30% 30%;
+    border: 2px solid #BDC3C7;
+    position: relative;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 20px;
+    margin: 10px auto;
+}
+
+    .eyes::before, .eyes::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #E74C3C;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #C0392B;
+    }
+
+.ribcage {
+    width: 30px;
+    height: 35px;
+    border-top: 5px solid #ECF0F1;
+    border-bottom: 5px solid #ECF0F1;
+    position: relative;
+    margin-top: 2px;
+}
+
+    .ribcage::after { /* Ribs ki lines */
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background: #ECF0F1;
+        left: 13px;
+    }
+
+/* --- Animations --- */
+.idle {
+    animation: bob 2s infinite ease-in-out;
+}
+
+@keyframes bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.attack {
+    transform: scale(1.2) translateX(20px);
+}
